@@ -33,26 +33,12 @@ const Header = () => {
           <Nav className="mr-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/lists-movie">Lists Movie</Nav.Link>
-            {/* <Nav style={{ padding: "1em" }}>
-              <Link to="/">Home</Link>
-            </Nav>
-            <Nav style={{ padding: "1em" }}>
-              <Link to="/lists-movie">Lists Movie</Link>
-            </Nav>
-            <Nav style={{ padding: "1em" }}>
-              <Link to="/lists-game">Lists Movie</Link>
-            </Nav> */}
             <Nav.Link href="/lists-game">Lists Game</Nav.Link>
           </Nav>
           <Nav style={{ padding: "1em" }}>
-            {user === null && (
-              // <Link to="/login">Login</Link>
-              <Nav.Link href="/login">Login</Nav.Link>
-            )}
-            {user && (
-              // <Link onClick={handleLogout}>Logout</Link>
-              <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
-            )}
+            {user === null && <Nav.Link href="/login">Login</Nav.Link>}
+            {user === null && <Nav.Link href="/register">Register</Nav.Link>}
+            {user && <Nav.Link onClick={handleLogout}>Logout</Nav.Link>}
           </Nav>
         </Navbar.Collapse>
       </Navbar>

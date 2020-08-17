@@ -21,10 +21,12 @@ import AddGame from "../components/AddGame";
 import EditGame from "../components/EditGame";
 
 import Login from "../components/Login";
+import Register from "../components/Register";
 import { UserContext } from "../context/UserContext";
+import { RegisterContext } from "../context/RegisterContext";
 
 const Section = () => {
-  const [user] = useContext(UserContext);
+  const [user] = useContext(UserContext, RegisterContext);
 
   const PrivateRoute = ({ user, ...props }) => {
     if (user) {
@@ -81,7 +83,7 @@ const Section = () => {
             component={EditGame}
           />
 
-          {/* <Route exact path="/about" user={user} component={About} /> */}
+          <LoginRoute exact path="/register" user={user} component={Register} />
           <LoginRoute exact path="/login" user={user} component={Login} />
           {/* <PrivateRoute exact path="/moviesss" user={user} component={Movies} /> */}
         </Switch>

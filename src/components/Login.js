@@ -13,11 +13,11 @@ const Login = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (input.username === "admin" && input.password === "admin") {
+    if (input.username === "badru" && input.password === "badru") {
       setUser({ username: input.username });
       localStorage.setItem(
         "user",
-        JSON.stringify({ username: "admin", password: "admin" })
+        JSON.stringify({ username: "badru", password: "badru" })
       );
     } else {
       alert("username dan password gagal");
@@ -51,7 +51,7 @@ const Login = () => {
             <Card.Body>
               <Form onSubmit={handleSubmit}>
                 <Form.Group>
-                  <Form.Label>Nama</Form.Label>
+                  <Form.Label>Username</Form.Label>
                   <Form.Control
                     type="text"
                     name="username"
@@ -78,28 +78,6 @@ const Login = () => {
               </Form>
             </Card.Body>
           </Card>
-          {/* <h1 className="text-bold text-primary">Login</h1>
-          <form onSubmit={handleSubmit}>
-            <label>Username: </label>
-            <input
-              type="text"
-              name="username"
-              onChange={handleChange}
-              value={input.username}
-            />
-            <br />
-            <label>Password: </label>
-            <input
-              type="password"
-              name="password"
-              onChange={handleChange}
-              value={input.password}
-            />
-            <br />
-            <Button type="submit" variant="success" block>
-              Login
-            </Button>
-          </form> */}
         </Col>
       </Row>
     </>
