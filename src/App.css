@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: left;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.header {
+  box-sizing: border-box;
+  justify-content: center;
+  display: flex;
+  background-color: #003366;
+  color: #ffffff;
+  padding: 1em 0;
+  width: 100%;
+}
+
+.Title {
+  text-align: center;
+}
+
+.container {
+  width: 750px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border: 1px solid #282c34;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+thead > tr > th {
+  background-color: #aaaaaa;
+  padding: 0.2em 5em;
+}
+tbody > tr > td {
+  background-color: #fa7f50;
+  padding: 0.2em 0.5em;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+}
+
+.col {
+  /* position: relative; */
+  width: 50%;
+  float: left;
+  padding: 0.5em 0;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+form {
+  margin-bottom: 2em;
+  background-color: #f2f2f2;
+  border-radius: 0.5em;
+  padding: 1.5em;
+  width: 100%;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.75em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  margin-bottom: 0.5em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border: 1px solid #3598db;
+}
+
+label {
+  padding: 0.75em 0.75em 0.75em 0;
+  display: inline-block;
+}
+
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 0.75em 2em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.item {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.counter {
+  float: right;
+}
